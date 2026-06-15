@@ -1,62 +1,34 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <title>Université Saint Franck</title>
+<title>Restricted Archive</title>
+
+<script>
+function checkPassword() {
+    var password = document.getElementById("password").value;
+
+    if(password == "REDWOOD96") {
+        window.location.href = "archiveprivee.html";
+    }
+    else {
+        alert("Access Denied");
+    }
+}
+</script>
+
 </head>
 
-<body bgcolor="#FFFFFF" text="#000000">
+<body>
 
-<center>
+<h1>Restricted University Archive</h1>
 
-<img src="images/logo.png" width="180">
+<p>Enter Security Code:</p>
 
-<h1>Université Saint Franck</h1>
+<input type="password" id="password">
 
-<h2>Halls Etudiants</h2>
-
-<p>Année Universitaire 1995 - 1996</p>
-
-</center>
-
-<hr>
-
-<center>
-
-<h1>HALL LAMBDA</h1>
-  
-<p>
-Le Hall Lambda met l'accent sur la créativité et l'expression personnelle.
-</p>
-
-<p>
-Ses résidents participent activement à la vie culturelle du campus à travers les arts, l'écriture, le théâtre ou la musique.
-</p>
-
-<p>
-L'innovation et l'imagination y sont particulièrement encouragées.
-</p>
-
-</center>
-
-<hr>
-
-<p>
-<a href="index.html">
-← Retour au Menu Principal
-</a>
-</p>
-
-<hr>
-
-<p>
-Dernière mise à jour : 14 aout 1996
-</p>
-
-<p>
-Optimisé pour Netscape Navigator 3.0
-</p>
+<button onclick="checkPassword()">
+Login
+</button>
 
 </body>
-
 </html>
