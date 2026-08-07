@@ -122,6 +122,61 @@ Optimisé pour Netscape Navigator 3.0
 Dernière mise à jour : 14 aout 1996
 </p>
 
+<div style="
+position:fixed;
+bottom:20px;
+right:20px;
+">
+
+<input
+type="password"
+id="secretCode"
+placeholder=""
+size="15"
+onkeydown="if(event.key==='Enter') verifierCode();">
+
+<input
+type="button"
+value="OK"
+onclick="verifierCode()">
+
+</div>
+
+<script>
+
+function verifierCode() {
+
+    var code = document.getElementById("secretCode").value;
+
+    code = code.toUpperCase();
+
+    if(code == "322") {
+
+        window.location.href = "archives.html";
+
+    }
+
+    else if(code == "HAWKINS") {
+
+        window.location.href = "hawkins.html";
+
+    }
+
+    else if(code == "KRISTIN") {
+
+        window.location.href = "kristin.html";
+
+    }
+
+    else {
+
+        alert("Code inconnu.");
+
+    }
+
+}
+
+</script>
 </body>
 
 </html>
