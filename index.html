@@ -5,6 +5,29 @@
     <title>Saint Franck University</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+
+#terminal {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+}
+
+@media (max-width: 600px) {
+
+    #terminal {
+        right: 10px;
+        bottom: 10px;
+    }
+
+    #terminal input {
+        font-size: 16px;
+    }
+
+}
+
+</style>
     
 </head>
 
@@ -125,23 +148,15 @@ Optimisé pour Netscape Navigator 3.0
 Dernière mise à jour : 14 aout 1996
 </p>
 
-<div style="
-position:fixed;
-bottom:20px;
-right:20px;
-">
+<div id="terminal">
 
-<input
-type="password"
-id="secretCode"
-placeholder=""
-size="15"
-onkeydown="if(event.key==='Enter') verifierCode();">
+<input type="password"
+       id="secretCode"
+       size="15">
 
-<input
-type="button"
-value="OK"
-onclick="verifierCode()">
+<input type="button"
+       value="OK"
+       onclick="verifierCode()">
 
 </div>
 
