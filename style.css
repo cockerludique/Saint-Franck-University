@@ -12,6 +12,27 @@ table {
     max-width: 100%;
 }
 
+
+/* Fiches des professeurs */
+
+.professeur {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.professeur img {
+    width: 150px;
+    height: auto;
+}
+
+.description {
+    max-width: 600px;
+}
+
+
+/* Adaptation pour téléphone */
+
 @media (max-width: 600px) {
 
     body {
@@ -29,6 +50,14 @@ table {
 
     h2 {
         font-size: 20px;
+    }
+
+    .professeur {
+        flex-direction: column;
+    }
+
+    .professeur img {
+        width: 120px;
     }
 
 }
