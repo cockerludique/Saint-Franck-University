@@ -52,20 +52,20 @@ Année Universitaire 1995 - 1996
 Nom d'utilisateur / Email / N° étudiant
 </p>
 
-<input type="text" name="identifiant" size="30">
+<input type="text" id="identifiantEtudiant" size="30">
 
 <p>
 Mot de passe
 </p>
 
-<input type="password" name="motdepasse" size="30">
+<input type="password" id="passwordEtudiant" size="30">
 
 <p>
 <input type="button" value="Question secrète">
 </p>
 
 <p>
-<input type="submit" value="Connexion">
+<input type="button" value="Connexion" onclick="connexionEtudiant()">
 </p>
 
 </form>
@@ -93,20 +93,20 @@ Mot de passe
 Nom d'utilisateur / Email
 </p>
 
-<input type="text" name="identifiant_prof" size="30">
+<input type="text" id="identifiantProf" size="30">
 
 <p>
 Mot de passe
 </p>
 
-<input type="password" name="motdepasse_prof" size="30">
+<input type="password" id="passwordProf" size="30">
 
 <p>
 <input type="button" value="Question secrète">
 </p>
 
 <p>
-<input type="submit" value="Connexion">
+<input type="button" value="Connexion" onclick="connexionProf()">
 </p>
 
 </form>
@@ -139,6 +139,57 @@ Dernière mise à jour : 14 aout 1996
 Optimisé pour Netscape Navigator 3.0
 </p>
 
+<script>
+
+function connexionEtudiant() {
+
+    var identifiant = document.getElementById("identifiantEtudiant").value;
+    var password = document.getElementById("passwordEtudiant").value;
+
+
+    if (identifiant == "ashley" && password == "322") {
+
+        window.location.href = "irc_ashley.html";
+
+    }
+
+    else if (identifiant == "morgan" && password == "517") {
+
+        window.location.href = "irc_morgan.html";
+
+    }
+
+    else {
+
+        alert("Identifiant ou mot de passe incorrect.");
+
+    }
+
+}
+
+
+function connexionProf() {
+
+    var identifiant = document.getElementById("identifiantProf").value;
+    var password = document.getElementById("passwordProf").value;
+
+
+    if (identifiant == "professor" && password == "741") {
+
+        window.location.href = "irc_professeurs.html";
+
+    }
+
+    else {
+
+        alert("Identifiant ou mot de passe incorrect.");
+
+    }
+
+}
+
+</script>
+  
 </body>
 
 </html>
