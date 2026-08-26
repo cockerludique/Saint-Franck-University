@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Saint Franck University - Document History</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body bgcolor="#FFFFFF" text="#000000">
+
+
+<center>
+
+<img src="images/logo.png" width="150">
+
+<h1>Saint Franck University</h1>
+
+<h2>DOCUMENT HISTORY</h2>
+
+<p>
+ARCHIVE - ACADEMIC YEAR 1995-1996
+</p>
+
+</center>
+
+
+<hr>
+
+
+<center>
+
+<table width="90%" border="1" cellpadding="10">
+
+<tr>
+
+<td>
+
+<center>
+
+<b>DOCUMENT VERSION CONTROL SYSTEM</b>
+
+<p>
+Historical document database
+</p>
+
+<p>
+Archive status:
+<b>READ ONLY</b>
+</p>
+
+</center>
+
+</td>
+
+</tr>
+
+</table>
+
+</center>
+
+
+<br>
+
+
+<center>
+
+<table width="90%" border="1" cellpadding="7" cellspacing="0">
+
+<tr>
+
+<td>
+<b>FILE</b>
+</td>
+
+<td>
+<b>DATE</b>
+</td>
+
+<td>
+<b>USER</b>
+</td>
+
+<td>
+<b>STATUS</b>
+</td>
+
+<td>
+<b>VERSION</b>
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+KRISTIN_DEWARE.TXT
+</td>
+
+<td>
+23/07/1996
+</td>
+
+<td>
+RH
+</td>
+
+<td>
+ACTIVE
+</td>
+
+<td>
+1.0
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+KRISTIN_DEWARE.TXT
+</td>
+
+<td>
+24/07/1996
+</td>
+
+<td>
+VN
+</td>
+
+<td>
+HIDDEN
+</td>
+
+<td>
+1.1
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+KRISTIN_DEWARE.TXT
+</td>
+
+<td>
+25/07/1996
+</td>
+
+<td>
+RH
+</td>
+
+<td>
+MODIFIED
+</td>
+
+<td>
+1.2
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+ASHLEY_MORGAN.TXT
+</td>
+
+<td>
+25/07/1996
+</td>
+
+<td>
+AM
+</td>
+
+<td>
+ACTIVE
+</td>
+
+<td>
+1.0
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+ASHLEY_PRIVATE.TXT
+</td>
+
+<td>
+25/07/1996
+</td>
+
+<td>
+AM
+</td>
+
+<td>
+HIDDEN
+</td>
+
+<td>
+1.0
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+HOUSE_SECURITY.TXT
+</td>
+
+<td>
+24/07/1996
+</td>
+
+<td>
+GF
+</td>
+
+<td>
+ACTIVE
+</td>
+
+<td>
+1.0
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+HOUSE_SECURITY.TXT
+</td>
+
+<td>
+25/07/1996
+</td>
+
+<td>
+MF
+</td>
+
+<td>
+MODIFIED
+</td>
+
+<td>
+1.1
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+SUMMER_EVENT.TXT
+</td>
+
+<td>
+24/07/1996
+</td>
+
+<td>
+SYSTEM
+</td>
+
+<td>
+ACTIVE
+</td>
+
+<td>
+1.0
+</td>
+
+</tr>
+
+
+</table>
+
+</center>
+
+
+<br>
+
+
+<hr>
+
+
+<center>
+
+<h2>SELECT DOCUMENT</h2>
+
+<p>
+
+Enter the exact file name:
+
+</p>
+
+
+<input type="text" id="filename" size="35">
+
+
+<p>
+
+<input type="button"
+value="View History"
+onclick="viewHistory()">
+
+</p>
+
+
+<p id="result"></p>
+
+</center>
+
+
+<script>
+
+function viewHistory() {
+
+    var filename =
+    document.getElementById("filename").value.toLowerCase();
+
+
+    if (filename == "kristin_deware.txt") {
+
+        window.location.href =
+        "history_kristin.html";
+
+    }
+
+    else if (filename == "ashley_private.txt") {
+
+        window.location.href =
+        "history_ashley.html";
+
+    }
+
+    else if (filename == "house_security.txt") {
+
+        window.location.href =
+        "history_security.html";
+
+    }
+
+    else if (filename == "summer_event.txt") {
+
+        window.location.href =
+        "history_event.html";
+
+    }
+
+    else {
+
+        document.getElementById("result").innerHTML =
+        "<b>Document not found.</b><br>" +
+        "No historical versions are available " +
+        "for this document.";
+
+    }
+
+}
+
+</script>
+
+
+<hr>
+
+
+<center>
+
+<h2>SYSTEM INFORMATION</h2>
+
+</center>
+
+
+<blockquote>
+
+The Saint Franck University intranet uses
+a permanent document history system.
+
+<br><br>
+
+When a document is modified, the previous
+version is retained in the archive.
+
+<br><br>
+
+Documents marked <b>HIDDEN</b> are not
+displayed through standard searches.
+
+<br><br>
+
+Documents marked <b>MODIFIED</b> have been
+replaced by a newer version.
+
+<br><br>
+
+<b>
+Deleting a document permanently is not
+supported by this system.
+</b>
+
+</blockquote>
+
+
+<hr>
+
+
+<center>
+
+<p>
+
+<a href="systemlog.html">
+[ SYSTEM LOG ]
+</a>
+
+</p>
+
+
+<p>
+
+<a href="archive.html">
+[ INTRANET ARCHIVE ]
+</a>
+
+</p>
+
+
+<p>
+
+<a href="irc.html">
+← Return to IRC Main Page
+</a>
+
+</p>
+
+</center>
+
+
+<hr>
+
+
+<p>
+
+Last update: 14 August 1996
+
+</p>
+
+
+<p>
+
+Optimized for Netscape Navigator 3.0
+
+</p>
+
+
+</body>
+
+</html>
