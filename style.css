@@ -12,6 +12,15 @@ table {
     max-width: 100%;
 }
 
+.catalogue td:nth-child(2) {
+    color: black;
+    text-decoration: underline;
+}
+
+.catalogue td:nth-child(2) a {
+    color: black;
+    text-decoration: underline;
+}
 
 /* Fiches des professeurs */
 
