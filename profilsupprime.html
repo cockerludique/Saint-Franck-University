@@ -1,26 +1,36 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+
 <title>Archive Corrompue</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
 
 
 <script>
+
 function checkPassword() {
-    var password = document.getElementById("password").value;
 
-   if(password == "riot666") {
-        window.location.href = "....";
+    var password =
+    document.getElementById("password").value.toLowerCase();
+
+    if(password == "riot666") {
+
+        window.location.href = "irc_ashley.html";
+
     }
+
     else {
-        alert("Access Denied");
+
+        alert("Code incorrect.");
+
     }
 
-   
 }
+
 
 function chercherQuestion() {
 
@@ -38,6 +48,7 @@ function chercherQuestion() {
 
     zoneQuestion.style.display = "none";
 
+
     if (identifiant == "am0806753926") {
 
         question.innerHTML =
@@ -46,20 +57,34 @@ function chercherQuestion() {
         zoneQuestion.style.display = "block";
 
     }
-        
-else {
 
-    question.innerHTML =
-    "Identifiant inconnu.";
+    else {
+
+        question.innerHTML =
+        "Identifiant inconnu.";
+
+    }
 
 }
-    if (identifiant == "am0806753926" && reponse == "bikinikill") {
+
+
+function verifierReponse() {
+
+    var identifiant =
+    document.getElementById("identifiant").value.toLowerCase();
+
+    var reponse =
+    document.getElementById("reponse").value.toLowerCase();
+
+
+    if (identifiant == "am0806753926" &&
+        reponse == "bikinikill") {
 
         window.location.href = "irc_ashley.html";
 
     }
 
-      else {
+    else {
 
         alert("Réponse incorrecte.");
 
@@ -67,20 +92,76 @@ else {
 
 }
 
-    
-    </script>
-    
+</script>
+
 </head>
+
 
 <body>
 
+
+<center>
+
 <h1>Archive Corrompue</h1>
+
+<p>
+Accès restreint.
+</p>
+
+
+<hr>
+
+
+<h2>ACCÈS PAR CODE</h2>
+
 
 <input type="password" id="password">
 
 <button onclick="checkPassword()">
-Login
+Connexion
 </button>
 
+
+<hr>
+
+
+<h2>ACCÈS PAR IDENTIFIANT</h2>
+
+
+<p>
+Entrez votre identifiant universitaire :
+</p>
+
+
+<input type="text" id="identifiant">
+
+<button onclick="chercherQuestion()">
+Valider
+</button>
+
+
+<br><br>
+
+
+<div id="zoneQuestion" style="display:none;">
+
+<p>
+<b id="question"></b>
+</p>
+
+
+<input type="text" id="reponse">
+
+<button onclick="verifierReponse()">
+Répondre
+</button>
+
+</div>
+
+
+</center>
+
+
 </body>
+
 </html>
