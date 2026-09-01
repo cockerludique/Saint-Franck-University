@@ -92,7 +92,27 @@ Récupéré des archives 1995-1996.
 function checkPassword() {
     var password = document.getElementById("password").value;
 
-    if(password == "SFU96BEST") {
-        window.location.href = "maintenancefiles.html";
+    if(password == "riotgrrrl") {
+        window.location.href = "ashley_private.html";
     }
+        
+ else {
+        alert("Access Denied");
+    }
+}
+</script>
 
+</head>
+
+<body>
+
+<p>Entrez le mouvement punk anarchiste pleinement féminin</p>
+
+<input type="password" id="password">
+
+<button onclick="checkPassword()">
+Dévérrouiller
+</button>
+
+</body>
+</html>
