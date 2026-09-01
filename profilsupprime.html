@@ -14,13 +14,36 @@ function checkPassword() {
 
     if(password == "REDWOOD96") {
         window.location.href = "archiveprivee.html";
+    } 
+    
+    else if(password == "riot666") {
+        window.location.href = "....";
     }
     else {
         alert("Access Denied");
     }
-}
-</script>
 
+   
+}
+
+function chercherQuestion() {
+
+    var identifiant =
+    document.getElementById("identifiant").value.toLowerCase();
+
+    var question =
+    document.getElementById("question");
+
+    var zoneQuestion =
+    document.getElementById("zoneQuestion");
+
+
+    /* On cache la zone de réponse avant chaque recherche */
+
+    zoneQuestion.style.display = "none";
+
+    </script>
+    
 </head>
 
 <body>
