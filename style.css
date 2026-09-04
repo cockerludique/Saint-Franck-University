@@ -123,11 +123,13 @@ table {
     /* ----- Évite que les contenus très longs
        forcent la largeur de l'écran ----- */
 
-    pre {
-        max-width: 100%;
-        overflow-x: auto;
-        box-sizing: border-box;
-    }
+   pre {
+    max-width:100%;
+    white-space:pre-wrap;
+    overflow-wrap:break-word;
+    word-wrap:break-word;
+    box-sizing:border-box;
+}
 
     code {
         word-break: break-word;
