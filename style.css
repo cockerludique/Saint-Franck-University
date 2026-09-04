@@ -22,6 +22,7 @@ table {
     text-decoration: underline;
 }
 
+
 /* Fiches des professeurs */
 
 .professeur {
@@ -91,7 +92,6 @@ table {
     /* ----- Tableaux ----- */
 
     table {
-        width: 100% !important;
         max-width: 100% !important;
         box-sizing: border-box;
     }
@@ -101,6 +101,22 @@ table {
         box-sizing: border-box;
         word-wrap: break-word;
         overflow-wrap: break-word;
+    }
+
+
+    /* ----- Formulaires ----- */
+
+    input,
+    select,
+    textarea {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        width: 100%;
+        max-width: 320px;
     }
 
 
@@ -122,6 +138,7 @@ table {
 
     a {
         overflow-wrap: break-word;
+        line-height: 1.5;
     }
 
 
@@ -148,6 +165,7 @@ table {
 
     .catalogue {
         width: 100%;
+        max-width: 100%;
         table-layout: fixed;
     }
 
@@ -167,26 +185,21 @@ table {
     }
 
 
-    /* ----- Cellules très larges ----- */
+    /* ----- Cellules avec largeur définie ----- */
 
     td[width],
     th[width] {
         max-width: 100%;
+        box-sizing: border-box;
     }
 
 
-    /* ----- Confort tactile ----- */
+    /* ----- Empêche les champs de formulaire
+       de dépasser de l'écran ----- */
 
-    a {
-        line-height: 1.5;
-    }
-
-
-    /* ----- Évite les débordements horizontaux
-       causés par certains contenus ----- */
-
-    * {
+    form {
         max-width: 100%;
     }
+
 
 }
