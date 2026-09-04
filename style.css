@@ -201,5 +201,26 @@ table {
         max-width: 100%;
     }
 
+ /* ----- Page IRC : connexion ----- */
 
+    .connexion {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .connexion td {
+        display: block;
+        width: 100% !important;
+        box-sizing: border-box;
+    }
+
+    .connexion input[type="text"],
+    .connexion input[type="password"] {
+        width: 100%;
+        max-width: 320px;
+        box-sizing: border-box;
+    }
+
+
+}
 }
